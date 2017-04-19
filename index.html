@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CI / CD @</title><meta name="generator" content="Asciidoctor 1.5.5 (Bespoke.js converter)"><meta name="mobile-web-app-capable" content="yes"><link rel="stylesheet" href="build/build.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css"></head><body><article class="deck"><section class="title" data-title=""><h1><span class="breakingBad">CI</span> /  <span class="breakingBad">CD</span> @ <span class="image"><img src="images/expedia.png" alt="expedia"></span></h1><figure class="image"><img src="images/breizhcamp_logo.png" alt="breizhcamp logo"></figure></section>
+<section><h2>About me</h2><ul class="build build-items"><li><span class="primary">Software engineer</span></li><li><span class="primary"><span class="icon"><i class="fa fa-twitter"></i></span> @g_gscheibel / @ExpediaEng / @ExpediaEng_Lon</span></li><li><span class="primary"><span class="icon"><i class="fa fa-pencil"></i></span> <a href="http://gscheibel.net" class="bare">http://gscheibel.net</a></span></li><li><span class="primary">and so on &#8230;&#8203;</span></li></ul></section>
+<section><figure class="image"><img src="images/checkout.png" alt="checkout"></figure></section>
+<section><h2>Conclusion</h2><ul class="build build-items"><li><span class="primary">Build</span></li><li><span class="primary">Measure</span></li><li><span class="primary">Learn</span></li><li><span class="primary">Loop</span></li></ul></section>
+<section class="paragraph"><h2>Build</h2></section>
+<section><h2>Confidence is key</h2></section>
+<section><h2>4 rules of simple design</h2><ol><li><span class="primary"><strong>Passes all the tests</strong></span></li><li><span class="primary"><strong>Express every idea we need to express</strong></span></li><li><span class="primary">Contains no duplication.</span></li><li><span class="primary">Minimized moving parts.</span></li></ol></section>
+<section><h2>Testing strategy</h2></section>
+<section><h2>A good test tests, a bad test tests</h2><ul class="build build-items"><li><span class="primary"></span><pre class="source"><code data-lang="java" class="language-java prettyprint">class FlightService {
+
+  void Flight get(String flightNumber) {
+
+    return expHttpClient
+            .get("https://externalService/flight/"+flightNumber)
+            .as(Flight.class);
+  }
+}</code></pre></li></ul></section>
+<section><h2>Feature rollout</h2><ul class="build build-items"><li><span class="primary"></span><pre class="source"><code data-lang="java" class="language-java prettyprint">if(config.isEnabled()){
+
+  newWay();
+
+} else {
+
+  currentWay();
+
+}</code></pre></li></ul></section>
+<section><h2>From Pull request to Production</h2><ul class="build build-items"><li><span class="primary">Automatisation is crucial</span></li><li><span class="primary">Done means in <strong>deployed production</strong></span></li></ul></section>
+<section><h2>Build It Simple, Stupid</h2><figure class="image"><img src="images/banzai.png" alt="banzai"></figure></section>
+<section><h2>Only Production really matters</h2></section>
+<section><h2>In Production != Taking traffic</h2></section>
+<section class="paragraph"><h2>Measure</h2></section>
+<section><h2>Measure everything</h2><p>CPU and memory are not the only metrics</p></section>
+<section><h2>Logging &amp; Monitoring</h2><pre class="source"><code data-lang="java" class="language-java prettyprint">"This is not a log"</code></pre></section>
+<section><pre class="source"><code data-lang="yaml" class="language-yaml prettyprint">datetime="18/04/2017 14:25:00T000"
+eventCode=42
+eventName="DID_SOMETHING"
+prop1="value1"
+prop2="value2"</code></pre></section>
+<section class="paragraph"><h2>Learn</h2></section>
+<section><h2>Don&#8217;t rush</h2></section>
+<section><h2>How do I know I&#8217;m on the right path?</h2></section>
+<section class="paragraph"><h2>Loop</h2></section>
+<section><h2>Conclusion</h2><ul class="build build-items"><li><span class="primary">Build</span></li><li><span class="primary">Measure</span></li><li><span class="primary">Learn</span></li><li><span class="primary">Loop</span></li></ul></section></article><script src="build/build.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script><script>Array.prototype.forEach.call(document.querySelectorAll('i.conum+b'),function(n){n.parentNode.removeChild(n)})</script><script>prettyPrint()</script></body></html>
