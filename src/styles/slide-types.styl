@@ -1,4 +1,27 @@
-section.title
-  background-color $color-heading
-  h1
-    color $color-inverse
+section
+  &.title
+    background-color $color
+    h1
+      color $color-heading
+    .breakingBad
+      color $color-inverse
+      border white solid 3px
+      background linear-gradient(135deg, #1b370f 0%,#53af6c 100%)
+      padding 4px 15px
+      font-weight bold
+
+  &.paragraph h2
+      color $color-secondary
+
+  .quote
+    figcaption
+      float right
+      font-style italic
+    p:before
+      color $color-secondary
+      content "\201c"
+      float left
+      font-size 2.75em
+      font-weight bold
+      line-height .6em
+      margin-left -0.6em

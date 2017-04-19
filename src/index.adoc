@@ -1,16 +1,135 @@
-= Bespoke.js Starter Presentation
+= [breakingBad]#CI# /  [breakingBad]#CD# @ image:expedia.png[]
 :!sectids:
 :imagesdir: images
+:source-highlighter: prettify
+:icons: font
 
-== Topic Slide
+image::breizhcamp_logo.png[]
 
-== Key Points
+== About me
+
 [%build]
-* First point
-* Second point
-* Final point
+* Software engineer
+* icon:twitter[] @g_gscheibel / @ExpediaEng / @ExpediaEng_Lon
+* icon:pencil[] http://gscheibel.net
+* and so on ...
 
 == !
-image::html5.svg[]
 
-== The End
+image::checkout.png[]
+
+== Conclusion
+
+[%build]
+* Build
+* Measure
+* Learn
+* Loop
+
+[.paragraph]
+== Build
+
+== Confidence is key
+
+== 4 rules of simple design
+
+. *Passes all the tests*
+. *Express every idea we need to express*
+. Contains no duplication.
+. Minimized moving parts.
+
+== Testing strategy
+
+== A good test tests, a bad test tests
+
+[%build]
+* {blank}
++
+[source, java]
+----
+class FlightService {
+
+  void Flight get(String flightNumber) {
+
+    return expHttpClient
+            .get("https://externalService/flight/"+flightNumber)
+            .as(Flight.class);
+  }
+}
+----
+
+== Feature rollout
+
+[%build]
+* {blank}
++
+[source,java]
+----
+if(config.isEnabled()){
+
+  newWay();
+
+} else {
+
+  currentWay();
+
+}
+----
+
+
+== From Pull request to Production
+
+[%build]
+* Automatisation is crucial
+* Done means in *deployed production*
+
+== Build It Simple, Stupid
+
+image::banzai.png[]
+
+== Only Production really matters
+
+== In Production != Taking traffic
+
+[.paragraph]
+== Measure
+
+== Measure everything
+
+CPU and memory are not the only metrics
+
+== Logging & Monitoring
+
+[source, java]
+----
+"This is not a log"
+----
+
+== !
+
+[source, yaml]
+----
+datetime="18/04/2017 14:25:00T000"
+eventCode=42
+eventName="DID_SOMETHING"
+prop1="value1"
+prop2="value2"
+----
+
+[.paragraph]
+== Learn
+
+== Don't rush
+
+== How do I know I'm on the right path?
+
+[.paragraph]
+== Loop
+
+== Conclusion
+
+[%build]
+* Build
+* Measure
+* Learn
+* Loop

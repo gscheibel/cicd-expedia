@@ -42,7 +42,7 @@ gulp.task('html', ['clean:html'], function() {
     .pipe(exec('bundle exec asciidoctor-bespoke -o - src/index.adoc', { pipeStdout: true, maxBuffer: MAX_HTML_FILE_SIZE }))
     .pipe(exec.reporter({ stdout: false }))
     .pipe(rename('index.html'))
-    .pipe(chmod(644))
+    .pipe(chmod(0o755))
     .pipe(gulp.dest('public'))
     .pipe(connect.reload());
 });
