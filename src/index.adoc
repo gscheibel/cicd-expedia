@@ -58,7 +58,7 @@ class FlightService {
 }
 ----
 
-== Feature rollout
+== Coding in the dark
 
 [%build]
 * {blank}
@@ -76,12 +76,21 @@ if(config.isEnabled()){
 }
 ----
 
-
 == From Pull request to Production
 
 [%build]
 * Automatisation is crucial
 * Done means in *deployed production*
+
+== Build It Simple, Stupid
+
+image::banzai.png[]
+
+== Adding a new feature
+
+[%build]
+* Pull request icon:arrow-right[] Pull request build
+* Simple, Stupid icon:arrow-right[] `mvn clean install`
 
 == Build It Simple, Stupid
 
@@ -112,9 +121,15 @@ CPU and memory are not the only metrics
 datetime="18/04/2017 14:25:00T000"
 eventCode=42
 eventName="DID_SOMETHING"
+version="e2b126a9"
 prop1="value1"
 prop2="value2"
 ----
+
+== Remember Murphy's law
+
+[quote, Murphy's law]
+Anything that can go wrong, will go wrong
 
 [.paragraph]
 == Learn
