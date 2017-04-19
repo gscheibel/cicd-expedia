@@ -15,7 +15,7 @@
             .as(Flight.class);
   }
 }</code></pre></li></ul></section>
-<section><h2>Feature rollout</h2><ul class="build build-items"><li><span class="primary"></span><pre class="source"><code data-lang="java" class="language-java prettyprint">if(config.isEnabled()){
+<section><h2>Coding in the dark</h2><ul class="build build-items"><li><span class="primary"></span><pre class="source"><code data-lang="java" class="language-java prettyprint">if(config.isEnabled()){
 
   newWay();
 
@@ -26,6 +26,8 @@
 }</code></pre></li></ul></section>
 <section><h2>From Pull request to Production</h2><ul class="build build-items"><li><span class="primary">Automatisation is crucial</span></li><li><span class="primary">Done means in <strong>deployed production</strong></span></li></ul></section>
 <section><h2>Build It Simple, Stupid</h2><figure class="image"><img src="images/banzai.png" alt="banzai"></figure></section>
+<section><h2>Adding a new feature</h2><ul class="build build-items"><li><span class="primary">Pull request <span class="icon"><i class="fa fa-arrow-right"></i></span> Pull request build</span></li><li><span class="primary">Simple, Stupid <span class="icon"><i class="fa fa-arrow-right"></i></span> <code>mvn clean install</code></span></li></ul></section>
+<section><h2>Build It Simple, Stupid</h2><figure class="image"><img src="images/banzai.png" alt="banzai"></figure></section>
 <section><h2>Only Production really matters</h2></section>
 <section><h2>In Production != Taking traffic</h2></section>
 <section class="paragraph"><h2>Measure</h2></section>
@@ -34,8 +36,10 @@
 <section><pre class="source"><code data-lang="yaml" class="language-yaml prettyprint">datetime="18/04/2017 14:25:00T000"
 eventCode=42
 eventName="DID_SOMETHING"
+version="e2b126a9"
 prop1="value1"
 prop2="value2"</code></pre></section>
+<section><h2>Remember Murphy&#8217;s law</h2><figure class="quote"><blockquote><p>Anything that can go wrong, will go wrong</p></blockquote><figcaption>Murphy's law</figcaption></figure></section>
 <section class="paragraph"><h2>Learn</h2></section>
 <section><h2>Don&#8217;t rush</h2></section>
 <section><h2>How do I know I&#8217;m on the right path?</h2></section>
