@@ -10,11 +10,15 @@ image::breizhcamp_logo.png[]
 
 [%build]
 * Software engineer
-* icon:twitter[] @g_gscheibel / @ExpediaEng / @ExpediaEng_Lon
-* icon:pencil[] http://gscheibel.net
+* icon:twitter[] @g_scheibel / @ExpediaEng / @ExpediaEng_Lon
+* icon:pencil[] http://gscheibel.net / https://techblog.expedia.com
 * and so on ...
 
 == !
+
+https://gscheibel.github.io/cicd-expedia/
+
+== icon:hotel[] icon:plane[] icon:ship[] icon:train[]
 
 image::checkout.png[]
 
@@ -33,6 +37,9 @@ image::checkout.png[]
 
 == 4 rules of simple design
 
+[%build]
+* {blank}
++
 . *Passes all the tests*
 . *Express every idea we need to express*
 . Contains no duplication.
@@ -58,29 +65,9 @@ class FlightService {
 }
 ----
 
-== Coding in the dark
-
-[%build]
-* {blank}
-+
-[source,java]
-----
-if(config.isEnabled()){
-
-  newWay();
-
-} else {
-
-  currentWay();
-
-}
-----
-
 == From Pull request to Production
 
-[%build]
-* Automatisation is crucial
-* Done means in *deployed production*
+== Automatisation is crucial
 
 == Build It Simple, Stupid
 
@@ -98,7 +85,25 @@ image::banzai.png[]
 
 == Only Production really matters
 
+Done means in *deployed production*
+
 == In Production != Taking traffic
+
+[%build]
+* {blank}
++
+[source,java]
+----
+if(config.isEnabled()){
+
+  newWay();
+
+} else {
+
+  currentWay();
+
+}
+----
 
 [.paragraph]
 == Measure
@@ -107,7 +112,7 @@ image::banzai.png[]
 
 CPU and memory are not the only metrics
 
-== Logging & Monitoring
+== Logging
 
 [source, java]
 ----
